@@ -6,22 +6,20 @@
 <div class="container my-5">
     <h1>Comics</h1>
     @foreach($comics as $comic)
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        
+      <div class="card">       
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <div class="card-body">
-              <h5 class="card-title">{{$comic->title}}</h5>
+              <h5 class="card-title">Titolo: {{$comic->title}}</h5>
             </div>
           </li>
-          <li class="list-group-item">{{$comic->id}}</li>
-          <li class="list-group-item">{{$comic->description}}</li>
-          <li class="list-group-item">{{$comic->thumb}}</li>
-          <li class="list-group-item">{{$comic->price}}</li>
-          <li class="list-group-item">{{$comic->series}}</li>
-          <li class="list-group-item">{{$comic->sale_date}}</li>
-          <li class="list-group-item">{{$comic->type}}</li>
+          <li class="list-group-item"><strong></strong> {{$comic->id}}</li>
+          <li class="list-group-item"><strong>Descrizione:</strong> {{$comic->description}}</li>
+          <li class="list-group-item"><strong>Thumb:</strong> {{$comic->thumb}}</li>
+          <li class="list-group-item"><strong>Prezzo: </strong>€{{$comic->price}}</li>
+          <li class="list-group-item"><strong>Serie</strong>:{{$comic->series}}</li>
+          <li class="list-group-item"><strong>Data:</strong> {{$comic->sale_date}}</li>
+          <li class="list-group-item"><strong>Tipologia:</strong> {{$comic->type}}</li>
         </ul>
       </div>
   @endforeach
