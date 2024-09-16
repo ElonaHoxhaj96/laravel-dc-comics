@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Comic;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+
 
 return new class extends Migration
 {
@@ -11,18 +13,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comic', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100);
             $table->string('slug',255)->unique();
             $table->text('description')->nullable();
-            $table->decimal(4, 2);
+            $table->string('thumb');
+            $table->decimal('price', 4, 2);
             $table->string('series', 50); 
-            $table->dateTime('sale_date');
+            $table->date('sale_date');
             $table->string('type');           
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
