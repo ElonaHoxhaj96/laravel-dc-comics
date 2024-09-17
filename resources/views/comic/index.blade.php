@@ -15,7 +15,7 @@
           </li>
           <li class="list-group-item"><strong></strong> {{$comic->id}}</li>
           <li class="list-group-item"><strong>Descrizione:</strong> {{$comic->description}}</li>
-          <li class="list-group-item"><strong>Thumb:</strong> {{$comic->thumb}}</li>
+          <li class="list-group-item"><img class="thambnail" src="{{$comic->thumb}}" alt="{{$comic->title}}"></li>
           <li class="list-group-item"><strong>Prezzo: </strong>€{{$comic->price}}</li>
           <li class="list-group-item"><strong>Serie</strong>:{{$comic->series}}</li>
           <li class="list-group-item"><strong>Data:</strong> {{$comic->sale_date}}</li>
