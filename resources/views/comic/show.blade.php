@@ -19,6 +19,7 @@
         <li class="list-group-item"><strong>Data:</strong> {{$comics->sale_date}}</li>
         <li class="list-group-item"><strong>Tipologia:</strong> {{$comics->type}}</li>
     </ul>
+    <button><a class="btn-btn-sucsses" href="{{route('comics.index')}}" >Torna all'elenco</a></button>
     </div>
 
   
