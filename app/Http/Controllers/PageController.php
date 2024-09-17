@@ -20,9 +20,6 @@ class PageController extends Controller
        return view('contacts');
    }
 
-   public function comics(){
-    $comics = Comic::all();
-    return view('comics', compact('comics'));
-}
+
 }
 

@@ -3,7 +3,7 @@
 
 
 @section('content')
-<!-- <div class="container my-5">
+<div class="container my-5">
     <h1>Comics</h1>
     @foreach($comics as $comic)
       <div class="card">       
@@ -21,7 +21,7 @@
           <li class="list-group-item"><strong>Data:</strong> {{$comic->sale_date}}</li>
           <li class="list-group-item"><strong>Tipologia:</strong> {{$comic->type}}</li>
         </ul>
-      </div> -->
+      </div>
   @endforeach
     
     
