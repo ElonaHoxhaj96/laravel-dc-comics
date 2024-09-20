@@ -15,6 +15,7 @@
           <th scope="col">Prezzo</th>
           <th scope="col">Serie</th>
           <th scope="col">Dettagli</th>
+          <th scope="col">Modifica</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +25,9 @@
             <td>{{$comic->title}}</td>
             <td>€{{$comic->price}}</td>
             <td>{{$comic->series}}</td>
-            <td ><a class="btn-btn-sucsses" href="{{route('comics.show', $comic)}}" ><i class="fa-solid fa-eye"></i></a></td>
+            <td ><a class="btn btn-success" href="{{route('comics.show', $comic)}}" title="vedi" ><i class="fa-solid fa-eye"></i></a></td>
+            <td ><a class="btn btn-warning" href="{{route('comics.edit', $comic)}}" title="modifica" ><i class="fa-solid fa-pen-to-square"></i></i></a></td>
+          
           </tr>
         @endforeach
       </tbody>
