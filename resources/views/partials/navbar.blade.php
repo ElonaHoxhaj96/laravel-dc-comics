@@ -10,6 +10,7 @@
             <a class="nav-link" href="{{ route('about') }}">Chi siamo</a>
             <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
             <a class="nav-link" href="{{ route('comics.index') }}">Comics</a>
+            <a class="nav-link" href="{{ route('comics.create') }}">New Comics</a>
         </div>
       </div>
     </div>

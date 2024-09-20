@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Comic;
 use Illuminate\Support\Str;
+use App\Functions\Helper;
 
 class ComicSeeder extends Seeder
 {
@@ -24,7 +25,7 @@ class ComicSeeder extends Seeder
             foreach ($arr_comics as $comic){
                 $new_comics = new Comic();
                 $new_comics->title = $comic['title'];
-                $new_comics->slug = $this->generateSlug($new_comics->title);
+                $new_comics->slug = Helper::generateSlug($new_comics->title, Comic::class);
                 $new_comics->description = $comic['description'];
                 $new_comics->thumb = $comic['thumb'];
                 $new_comics->price = $comic['price'];
@@ -35,19 +36,19 @@ class ComicSeeder extends Seeder
             }
     }
 
-    private function generateSlug($string){
-        $slug = Str::slug($string, '-');
-        $original_slug = $slug;
+    // private function generateSlug($string,){
+    //     $slug = Str::slug($string, '-');
+    //     $original_slug = $slug;
 
-        $exists = Comic::where('slug', $slug)->first();
-        $c = 1;
+    //     $exists = Comic::where('slug', $slug)->first();
+    //     $c = 1;
 
-        while($exists){
-            $slug = $original_slug . '-' . $c;
-            $exists = Comic::where('slug', $slug)->first();
-            $c++;
-        }
+    //     while($exists){
+    //         $slug = $original_slug . '-' . $c;
+    //         $exists = Comic::where('slug', $slug)->first();
+    //         $c++;
+    //     }
 
-        return $slug;
-    }
+    //     return $slug;
+    // }
 }
