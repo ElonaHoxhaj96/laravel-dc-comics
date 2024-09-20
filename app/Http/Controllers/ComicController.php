@@ -77,7 +77,18 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $comics = Comic::find($id);
+
+        //se il titolo cambia cambia lo slug altimenti mantengo il solito 
+        if($data['title'] == $comics->title){
+            $data['slug'] = $comics->slug;
+        }else{
+            $data['slug'] = Helper::generateSlug($data['title'], Comic::class);
+        }
+
+        $comics->update($data);
+        return redirect()->route('comics.show', $comics);
     }
 
     /**
