@@ -5,31 +5,32 @@
 @section('content')
 <div class="container my-5">
    <h1>Add New Comics</h1>
-   <form action="{{route('comics.store')}}" method="POST">
+   <form action="{{ route('comics.store' )}}" method="POST">
     @csrf
+   
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
-        <input type="text" class="form-control" id="title" name="titolo">
+        <input type="text" class="form-control" id="title" name="title" placeholder="inserisci il titolo">
     </div> 
     <div class="mb-3">
-        <label for="srl" class="form-label">Immagine</label>
-        <input type="text" class="form-control" id="srl" name="Immagine">
+        <label for="thumb" class="form-label">Immagine</label>
+        <input type="thumb" class="form-control" id="thumb" name="thumb" placeholder="inserisci l'url dell'immagine">
     </div>
     <div class="mb-3">
         <label for="price" class="form-label">Prezzo</label>
-        <input type="text" class="form-control" id="price" name="prezzo">
+        <input type="text" class="form-control" id="price" name="price" placeholder="inserisci il prezzo">
     </div>
     <div class="mb-3">
         <label for="serie" class="form-label">Serie</label>
-        <input type="text" class="form-control" id="series" name="serie">
+        <input type="text" class="form-control" id="series" name="series" placeholder="inserisci la serie">
     </div> 
     <div class="mb-3">
         <label for="sale_date" class="form-label">Data di Rilascio</label>
-        <input type="text" class="form-control" id="sale_date" name="serie">
+        <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="inserisci la data di rilascio ">
     </div> 
     <div class="mb-3">
         <label for="type" class="form-label">Tipo</label>
-        <input type="text" class="form-control" id="type" name="type">
+        <input type="text" class="form-control" id="type" name="type" placeholder="inserisci il tipo">
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
