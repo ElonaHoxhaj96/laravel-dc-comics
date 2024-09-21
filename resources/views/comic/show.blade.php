@@ -8,7 +8,8 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
         <div class="card-body">
-            <h5 class="card-title">Titolo: {{$comics->title}}</h5>
+            <h5 class="card-title">Titolo: {{$comics->title}} <a class="btn btn-warning" href="{{route('comics.edit', $comics)}}" title="modifica" ><i class="fa-solid fa-pen-to-square"></i></a>
+            </h5>
         </div>
         </li>
         <li class="list-group-item"><strong></strong> Id: {{$comics->id}}</li>
