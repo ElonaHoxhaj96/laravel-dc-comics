@@ -4,8 +4,14 @@
 
 @section('content')
 <div class="container my-5">
-    <h1>Home</h1>
-   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita facilis porro beatae nobis, quia quis animi voluptatum? Odio expedita ad eius odit laudantium, aliquid, ullam blanditiis amet, beatae veniam ab!</p>
+    <h1>{{ $title}}</h1>
+    <h3>
+        Nel database sono presenti {{$num_comics}} di Comics
+    </h3>
+    <h4>
+        L'ultimo comics aggiunto è: {{$title_last_comic}}
+    </h4>
+
 </div>
 
 @endsection

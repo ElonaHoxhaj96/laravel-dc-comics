@@ -9,7 +9,11 @@ class PageController extends Controller
 {
     // il petodo index è il metodo che si usa per la home
     public function index(){
-        return view('home');
+        $title = 'Benvenuti nel CRUD';
+        $num_comics = Comic::count();
+        $last_comic = Comic::orderby('id','desc')->first();
+        $title_last_comic = $last_comic->title;
+        return view('home', compact('title', 'num_comics', 'title_last_comic'));
    }
   
    public function about(){
